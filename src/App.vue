@@ -29,6 +29,7 @@ import DonationBanner from "./components/OpenwbPageDonationBanner.vue";
 import Messages from "./components/OpenwbPageMessages.vue";
 import Blocker from "./components/OpenwbPageBlocker.vue";
 import mqtt from "mqtt";
+import './charts/ChartjsConfig';
 
 export default {
   name: "OpenwbSettingsApp",

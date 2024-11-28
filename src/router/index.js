@@ -182,6 +182,10 @@ const routes = [
     },
     component: () => import("../views/InstallAssistant.vue"),
   },
+  {
+    path: '/test',
+    component: () => import("../pages/Dashboard.vue")
+  },
 ];
 /* examples for development only start here */
 if (import.meta.env.MODE !== "production") {

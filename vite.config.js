@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
+import path from 'path';
 
 import { nodePolyfills } from "vite-plugin-node-polyfills";
 import rollupNodePolyFill from "rollup-plugin-node-polyfills";
@@ -8,6 +9,24 @@ export default defineConfig(({ command, mode }) => {
   var myConfiguration = {
     plugins: [Vue()],
     base: "/openWB/web/settings/",
+    define: {
+      'process.env': process.env
+    },
+    resolve: {
+      alias: {
+        '@tailwindConfig': path.resolve(__dirname, 'tailwind.config.js'),
+      },
+    },
+    optimizeDeps: {
+      include: [
+        '@tailwindConfig',
+      ]
+    },  
+    build: {
+      commonjsOptions: {
+        transformMixedEsModules: true,
+      }
+    }
   };
   if (command === "serve") {
     if (mode === "test") {
