@@ -20,7 +20,7 @@
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@popperjs/core": "^2.11.8",
     "axios": "^1.7.7",
-    "bootstrap": "^4.6.2",
+    "bootstrap": "^5.0.1",
     "browserify": "^17.0.1",
     "buffer": "^6.0.3",
     "chart.js": "^4.4.6",
